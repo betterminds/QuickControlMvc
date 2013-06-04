@@ -1,3 +1,44 @@
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-05-28 23:55:44
 project --topLevelPackage br.com.betterminds --projectName QuickControlMvc --java 7 --packaging JAR
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-05-28 23:55:45
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-06-02 23:22:07
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+entity jpa --class ~.model.Telefone --versionField versao --testAutomatically
+field string --fieldName ddd --notNull --sizeMin 2 --sizeMax 4
+field string --fieldName prefixo --notNull --sizeMin 4 --sizeMax 5
+field string --fieldName numero --notNull --sizeMin 4 --sizeMax 5
+web mvc setup 
+web mvc all --package br.com.betterminds.model
+entity jpa --class ~.model.Endereco --versionField versao --testAutomatically 
+field string --fieldName logradouro --notNull --sizeMax 100
+field number --fieldName numero --type java.lang.Integer --notNull 
+field reference --fieldName telefone --type ~.model.Telefone --cardinality ONE_TO_ONE 
+web mvc all --package br.com.betterminds.model
+web mvc all --package br.com.betterminds.model
+web mvc all --package ~.model
+web mvc all --package ~.model
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-06-03 00:06:24
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-06-03 00:07:58
+web mvc all --package ~.model
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-06-03 00:45:49
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-06-03 22:48:34
+entity jpa --class ~.model.Pessoa
+field string --fieldName nome --notNull
+entity jpa --class ~.model.Pessoa --testAutomatically --versionField versao
+field string --fieldName nome --notNull --sizeMax 80
+entity jpa --class ~.model.Client --testAutomatically --versionField versao
+field reference --fieldName pessoa --type ~.model.Pessoa --cardinality ONE_TO_ONE 
+field reference --fieldName endereco --type ~.model.Endereco
+field reference --fieldName telefone --type ~.model.Telefone --cardinality ONE_TO_ONE 
+web mvc all --package br.com.betterminds.model
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-06-03 22:59:43
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-06-03 23:33:14
+hint
+// [failed] perform tests 
+// [failed] perform tests
+hint eclipse
+// [failed] perform eclipse
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-06-03 23:36:44
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-06-03 23:37:39
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-06-03 23:37:45

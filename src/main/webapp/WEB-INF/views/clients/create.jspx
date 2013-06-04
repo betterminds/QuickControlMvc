@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_br_com_betterminds_model_Client" modelAttribute="client" path="/clients" render="${empty dependencies}" z="pt4O7MX9Jb56iRGIRY1YxsjfUps=">
+        <field:select field="pessoa" id="c_br_com_betterminds_model_Client_pessoa" itemValue="id" items="${pessoas}" path="/pessoas" z="5OvsevsDroDaqGlEVtc6Ho8Zssc="/>
+        <field:select field="endereco" id="c_br_com_betterminds_model_Client_endereco" itemValue="id" items="${enderecoes}" path="/enderecoes" z="k/QLEV0L636Oz2pXufmy/sFB05Y="/>
+        <field:select field="telefone" id="c_br_com_betterminds_model_Client_telefone" itemValue="id" items="${telefones}" path="/telefones" z="P/ZGOxoZcBLPjXUYBRxCQyx/A5Y="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_br_com_betterminds_model_Client" render="${not empty dependencies}" z="EJQuBSO2AFfa/cONrNwG6WPclxw="/>
+</div>

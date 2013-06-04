@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_telefone" z="4n22pkm4bJ2Fj/q1Sn83Sfi3kyM=">
+            <menu:item id="i_telefone_new" messageCode="global_menu_new" url="/telefones?form" z="Kc0as4oU+nrXRFairesRT3AmmO8="/>
+            <menu:item id="i_telefone_list" messageCode="global_menu_list" url="/telefones?page=1&amp;size=${empty param.size ? 10 : param.size}" z="znLjhz7XGx2QPg7AA6jPSR0cPI8="/>
+        </menu:category>
+        <menu:category id="c_endereco" z="s9BKn2wbWWPfwTFC6mTuAyij4G4=">
+            <menu:item id="i_endereco_new" messageCode="global_menu_new" url="/enderecoes?form" z="m5tuJr/LVGrjtKf2xuftIXUVvEs="/>
+            <menu:item id="i_endereco_list" messageCode="global_menu_list" url="/enderecoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+vFivh7Hy8IF35ihWtKEzgeiJTY="/>
+        </menu:category>
+        <menu:category id="c_client" z="TjeLu8x0oS98tSiRzdPNDOc8U+c=">
+            <menu:item id="i_client_new" messageCode="global_menu_new" url="/clients?form" z="0rEWYB2Yq6qokJif3zv05zcXpXk="/>
+            <menu:item id="i_client_list" messageCode="global_menu_list" url="/clients?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/DxsyzfFyvp93UEW0WcXvtjs4zo="/>
+        </menu:category>
+        <menu:category id="c_pessoa" z="+aatRJEukY0VkypzukagjWNE4kY=">
+            <menu:item id="i_pessoa_new" messageCode="global_menu_new" url="/pessoas?form" z="Rr4+kGG6fQxUYdxWcEQtEnEXymg="/>
+            <menu:item id="i_pessoa_list" messageCode="global_menu_list" url="/pessoas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="abLzfKmR1yrrHCHbjuhOAxfua8g="/>
+        </menu:category>
+    </menu:menu>
+</div>

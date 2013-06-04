@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_betterminds_model_Endereco" object="${endereco}" path="/enderecoes" z="sxEeEmS2ZRyQB5EIj6SQPvmzk2g=">
+        <field:display field="logradouro" id="s_br_com_betterminds_model_Endereco_logradouro" object="${endereco}" z="sVxlwHKSOmDXRBukooR+rRLlCMQ="/>
+        <field:display field="numero" id="s_br_com_betterminds_model_Endereco_numero" object="${endereco}" z="jF9fd6+5qOEMKs165OPRce+mV0Y="/>
+        <field:display field="telefone" id="s_br_com_betterminds_model_Endereco_telefone" object="${endereco}" z="34Tszsx3C52BE7IrrKexl9HGQcY="/>
+    </page:show>
+</div>
