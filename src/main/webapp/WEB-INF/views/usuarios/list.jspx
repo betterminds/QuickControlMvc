@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_br_com_betterminds_model_Usuario" items="${usuarios}" z="zrlEzLArFPyRMxSs+7NcHFiZrfk=">
+        <table:table data="${usuarios}" id="l_br_com_betterminds_model_Usuario" path="/usuarios" z="myezlR2UvUlAv1qeLo1U0wF3juM=">
+            <table:column id="c_br_com_betterminds_model_Usuario_nome" property="nome" z="h7c1bJjppAKlewxBomMu7wG9yq4="/>
+            <table:column id="c_br_com_betterminds_model_Usuario_senha" property="senha" z="oQNCmvIyQnL5pMXDqlBkzC+bLbI="/>
+            <table:column id="c_br_com_betterminds_model_Usuario_usuario" property="usuario" z="k5sn8/gkVKRfgnBI2FkGA+rT1Fc="/>
+            <table:column id="c_br_com_betterminds_model_Usuario_email" property="email" z="vQB0goV3OA7/XHYEUOciJZm4iz4="/>
+        </table:table>
+    </page:list>
+</div>

@@ -48,3 +48,12 @@ web mvc all --package br.com.betterminds.web
 web mvc all --package br.com.betterminds.web
 web mvc all --package br.com.betterminds.web
 web mvc all --package ~.web
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-06-05 00:05:35
+entity jpa --class br.com.betterminds.model.Usuario --testAutomatically --versionField versao
+field string --fieldName nome --notNull --sizeMax 100
+field email template --fieldName email
+field string --fieldName senha --notNull --sizeMin 5 --sizeMax 10 
+// [failed] field string --fieldName user --unique --sizeMin 5 --sizeMax 20 --notNull 
+field string --fieldName usuario --unique --sizeMin 5 --sizeMax 20 --notNull 
+web mvc all --package ~.controllers
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-06-05 00:32:38

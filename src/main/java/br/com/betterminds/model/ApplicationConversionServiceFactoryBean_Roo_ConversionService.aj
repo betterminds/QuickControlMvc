@@ -8,6 +8,7 @@ import br.com.betterminds.model.Client;
 import br.com.betterminds.model.Endereco;
 import br.com.betterminds.model.Pessoa;
 import br.com.betterminds.model.Telefone;
+import br.com.betterminds.model.Usuario;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.FormatterRegistry;
@@ -112,6 +113,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Usuario, String> ApplicationConversionServiceFactoryBean.getUsuarioToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<br.com.betterminds.model.Usuario, java.lang.String>() {
+            public String convert(Usuario usuario) {
+                return new StringBuilder().append(usuario.getNome()).append(' ').append(usuario.getUsuario()).append(' ').append(usuario.getSenha()).append(' ').append(usuario.getEmail()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Usuario> ApplicationConversionServiceFactoryBean.getIdToUsuarioConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, br.com.betterminds.model.Usuario>() {
+            public br.com.betterminds.model.Usuario convert(java.lang.Long id) {
+                return Usuario.findUsuario(id);
+            }
+        };
+    }
+    
+    public Converter<String, Usuario> ApplicationConversionServiceFactoryBean.getStringToUsuarioConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, br.com.betterminds.model.Usuario>() {
+            public br.com.betterminds.model.Usuario convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Usuario.class);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getClientToStringConverter());
         registry.addConverter(getIdToClientConverter());
@@ -125,6 +150,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getTelefoneToStringConverter());
         registry.addConverter(getIdToTelefoneConverter());
         registry.addConverter(getStringToTelefoneConverter());
+        registry.addConverter(getUsuarioToStringConverter());
+        registry.addConverter(getIdToUsuarioConverter());
+        registry.addConverter(getStringToUsuarioConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {
