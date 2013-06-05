@@ -42,3 +42,9 @@ hint eclipse
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-06-03 23:37:39
 exit
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-06-03 23:37:45
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-06-04 22:09:55
+web mvc all --package br.com.betterminds.web
+web mvc all --package br.com.betterminds.web
+web mvc all --package br.com.betterminds.web
+web mvc all --package br.com.betterminds.web
+web mvc all --package ~.web
